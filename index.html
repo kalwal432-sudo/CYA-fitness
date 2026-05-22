@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CYA | Wellness, Yoga, Zumba & Dance</title>
+    <meta name="description" content="Premium multilingual yoga, zumba, dance choreography, and wellness booking platform for CYA." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient"><span></span><span></span><span></span></div>
+    <header class="site-header" id="top">
+      <a class="brand" href="#home" data-section-link="home" aria-label="CYA home">
+        <span class="brand-mark" id="brandMark" aria-hidden="true">
+          <svg viewBox="0 0 96 96">
+            <path d="M16 58c20-4 30-25 32-45 15 10 23 25 21 44 7-6 12-15 13-28 10 25 1 43-23 52-19 7-36-1-43-23Z" />
+            <path d="M46 16c-5 25-15 38-30 42 13 6 29 2 40-10 9-11 8-23-10-32Z" />
+            <circle cx="66" cy="34" r="3" />
+          </svg>
+        </span>
+        <span class="brand-text"><strong>CYA</strong><small data-i18n="brandSub">See Your Agility</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" data-nav="home" data-section-link="home" data-i18n="navHome">Home</a>
+        <a href="#yoga" data-nav="yoga" data-section-link="yoga" data-i18n="navYoga">Yoga</a>
+        <a href="#zumba" data-nav="zumba" data-section-link="zumba" data-i18n="navZumba">Zumba</a>
+        <a href="#dance" data-nav="dance" data-section-link="dance" data-i18n="navDance">Dance</a>
+        <a href="#wellbeing" data-nav="wellbeing" data-section-link="wellbeing" data-i18n="navWellbeing">Wellbeing</a>
+        <a href="#plans" data-nav="plans" data-section-link="plans" data-i18n="navPlans">Plans</a>
+        <a href="#booking" data-nav="booking" data-section-link="booking" data-i18n="navBook">Book</a>
+        <a href="#gallery" data-nav="gallery" data-section-link="gallery" data-i18n="navGallery">Gallery</a>
+        <a href="#contact" data-nav="contact" data-section-link="contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="language-switcher">
+        <button class="lang-button active" data-lang="en">EN</button>
+        <button class="lang-button" data-lang="hi">हिं</button>
+        <button class="lang-button" data-lang="kn">ಕನ್</button>
+      </div>
+      <div class="mega-menu" id="megaMenu"></div>
+    </header>
+
+    <main>
+      <section class="hero section-theme" id="home" data-theme="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="heroEyebrow">Luxury movement, Indian soul</p>
+          <h1 data-i18n="heroTitle">CYA</h1>
+          <h3 class="vision-line" data-i18n="heroVision">See Your Agility</h3>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">Premium yoga, zumba, dance choreography, and wellbeing guidance designed for Instagram-first booking.</p>
+          <div class="hero-actions">
+            <button class="button primary" data-open-booking data-i18n="bookTrial">Book Trial Class</button>
+            <a class="button secondary whatsapp-link" href="#" target="_blank" rel="noreferrer" data-i18n="whatsappJoin">WhatsApp to Join</a>
+          </div>
+          <div class="hero-stats">
+            <span><strong>4</strong><small data-i18n="heroStat1">Core programs</small></span>
+            <span><strong>3</strong><small data-i18n="heroStat2">Languages</small></span>
+            <span><strong>₹199</strong><small data-i18n="heroStat3">Trial class</small></span>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="portrait-halo"></div>
+          <img src="assets/cartoon-yoga.png" alt="CYA cartoon trainer in yoga pose" />
+        </div>
+        <div class="service-grid reveal" id="serviceGrid"></div>
+      </section>
+
+      <section class="section yoga-section section-theme" id="yoga" data-theme="yoga">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="yogaEyebrow">Yoga Dashboard</p>
+          <h2 data-i18n="yogaTitle">Choose a guided yoga journey</h2>
+          <p data-i18n="yogaIntro">Tap a yoga type to open its introduction, benefits, asanas, breathing, timings, notes and booking flow.</p>
+        </div>
+        <div class="flow-line reveal" id="yogaFlow"></div>
+        <div class="category-strip reveal" id="yogaCategoryStrip"></div>
+        <div class="card-grid asana-grid reveal" id="asanaGrid"></div>
+        <div class="materials-lock reveal">
+          <div>
+            <p class="eyebrow" data-i18n="materialsEyebrow">Premium Notes & Materials</p>
+            <h3 data-i18n="materialsTitle">Downloadable guides are reserved for subscribed candidates.</h3>
+            <p id="materialsStatus" data-i18n="materialsLocked">Subscribe to access premium yoga materials and wellness notes.</p>
+          </div>
+          <div class="materials-actions">
+            <button class="button secondary" id="previewMaterialsBtn" data-i18n="previewMaterials">Preview Materials</button>
+            <button class="button primary" data-plan-trigger="Monthly Fitness Plan" data-i18n="unlockMaterials">Subscribe to Unlock</button>
+            <a class="button ghost locked-download" id="downloadNotesBtn" href="assets/yoga-notes-summary.txt" download data-i18n="downloadNotes">Download Notes</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section zumba-section section-theme" id="zumba" data-theme="zumba">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="zumbaEyebrow">Zumba Energy</p>
+          <h2 data-i18n="zumbaTitle">Vibrant cardio programs with premium movement flow</h2>
+        </div>
+        <div class="flow-line reveal" id="zumbaFlow"></div>
+        <div class="card-grid" id="zumbaGrid"></div>
+      </section>
+
+      <section class="section dance-section section-theme" id="dance" data-theme="dance">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="danceEyebrow">Dance Choreography</p>
+          <h2 data-i18n="danceTitle">Stage-ready choreography for weddings, schools and events</h2>
+        </div>
+        <div class="flow-line reveal" id="danceFlow"></div>
+        <div class="card-grid dance-grid" id="danceGrid"></div>
+      </section>
+
+      <section class="section wellbeing-section section-theme" id="wellbeing" data-theme="wellbeing">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="wellbeingEyebrow">Health & Wellbeing</p>
+          <h2 data-i18n="wellbeingTitle">Wellness dashboards for women, men, children and elders</h2>
+          <p data-i18n="medicalNote">Educational fitness guidance only. For medical conditions, consult a qualified doctor.</p>
+        </div>
+        <div class="wellness-tabs reveal" id="wellnessTabs"></div>
+        <div class="flow-line reveal" id="wellnessFlow"></div>
+        <div class="wellness-panel reveal" id="wellnessPanel"></div>
+      </section>
+
+      <section class="section schedule-section" id="schedule" data-theme="home">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="scheduleEyebrow">Class Timings</p>
+          <h2 data-i18n="scheduleTitle">Professional weekly schedule</h2>
+        </div>
+        <div class="schedule-grid reveal" id="scheduleGrid"></div>
+      </section>
+
+      <section class="section tools-section" id="tools">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="toolsEyebrow">Wellness Tools</p>
+          <h2 data-i18n="toolsTitle">Small daily trackers for better consistency</h2>
+        </div>
+        <div class="tool-grid reveal">
+          <article class="tool-card">
+            <h3 data-i18n="bmiTitle">BMI Calculator</h3>
+            <input id="heightInput" type="number" placeholder="Height cm" />
+            <input id="weightInput" type="number" placeholder="Weight kg" />
+            <button class="button secondary" id="bmiBtn" data-i18n="calculate">Calculate</button>
+            <p id="bmiResult">BMI: --</p>
+          </article>
+          <article class="tool-card">
+            <h3 data-i18n="waterTitle">Water Intake</h3>
+            <div class="water-meter"><span id="waterFill"></span></div>
+            <button class="button secondary" id="waterBtn" data-i18n="addGlass">Add Glass</button>
+            <p id="waterText">0 / 8 glasses</p>
+          </article>
+          <article class="tool-card">
+            <h3 data-i18n="timerTitle">Meditation Timer</h3>
+            <div class="timer-orb" id="timerOrb">05:00</div>
+            <button class="button secondary" id="timerBtn" data-i18n="startTimer">Start</button>
+          </article>
+          <article class="tool-card">
+            <h3 data-i18n="progressTitle">Progress Tracker</h3>
+            <div class="progress-line"><span></span></div>
+            <p data-i18n="progressText">Weekly movement goal: 65%</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section trainer-section" id="trainer">
+        <div class="trainer-card reveal">
+          <img src="assets/cartoon-yoga.png" alt="CYA trainer cartoon" />
+          <div>
+            <p class="eyebrow" data-i18n="trainerEyebrow">Meet Your Trainer</p>
+            <h2 data-i18n="trainerTitle">Friendly guidance with a graceful Indian fitness style</h2>
+            <p data-i18n="trainerText">Yoga, zumba, choreography and wellness coaching with clear routines, beginner-friendly pacing and warm accountability.</p>
+            <div class="cert-row"><span data-i18n="cert1">Yoga instruction</span><span data-i18n="cert2">Dance choreography</span><span data-i18n="cert3">Wellness guidance</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section plans-section" id="plans" data-theme="plans">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="plansEyebrow">Subscription Plans</p>
+          <h2 data-i18n="plansTitle">Premium plans with WhatsApp payment flow</h2>
+        </div>
+        <div class="pricing-grid reveal" id="pricingGrid"></div>
+      </section>
+
+      <section class="section booking-section" id="booking">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="bookingEyebrow">Book Class</p>
+          <h2 data-i18n="bookingTitle">Send your booking request instantly</h2>
+        </div>
+        <form class="booking-form reveal" id="bookingForm">
+          <label><span data-i18n="fieldName">Name</span><input name="name" required /></label>
+          <label><span data-i18n="fieldMobile">Phone number</span><input name="mobile" inputmode="tel" required /></label>
+          <label><span data-i18n="fieldAge">Age</span><input name="age" inputmode="numeric" /></label>
+          <label><span data-i18n="fieldGender">Gender</span><select name="gender"><option>Female</option><option>Male</option><option>Child</option><option>Other</option></select></label>
+          <label><span data-i18n="fieldProgram">Program</span><select name="program"><option>Yoga</option><option>Zumba</option><option>Dance</option><option>Health & Wellbeing</option></select></label>
+          <label><span data-i18n="fieldTime">Preferred timing</span><input name="time" placeholder="Morning / Evening" /></label>
+          <label><span data-i18n="fieldLanguage">Language</span><select name="language"><option>English</option><option>Hindi</option><option>Kannada</option></select></label>
+          <label class="full"><span data-i18n="fieldMessage">Message</span><textarea name="message" rows="4"></textarea></label>
+          <div class="form-actions full">
+            <button class="button primary" type="submit" data-i18n="bookClass">Book Class</button>
+            <a class="button secondary" id="bookingWhatsappBtn" href="#" target="_blank" rel="noreferrer" data-i18n="whatsappBooking">WhatsApp Booking</a>
+          </div>
+          <p class="confirmation full" id="bookingConfirmation" hidden data-i18n="bookingConfirmation">Booking request ready. We will contact you soon.</p>
+        </form>
+      </section>
+
+      <section class="section admin-section" id="admin">
+        <div class="section-heading reveal">
+          <p class="eyebrow">CRM Preview</p>
+          <h2>Enquiry management dashboard placeholder</h2>
+          <p>Booking records are stored locally in this browser for preview. Later this can connect to Google Sheets.</p>
+        </div>
+        <div class="admin-card reveal">
+          <div class="admin-actions">
+            <button class="button secondary" id="exportLeadsBtn">Export Leads CSV</button>
+            <span id="leadCount">0 enquiries</span>
+          </div>
+          <div class="lead-table-wrap">
+            <table class="lead-table">
+              <thead><tr><th>Name</th><th>Class</th><th>Timing</th><th>Payment</th><th>Contact</th></tr></thead>
+              <tbody id="leadTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="galleryEyebrow">Gallery</p>
+          <h2 data-i18n="galleryTitle">Class moments, transformations and event memories</h2>
+        </div>
+        <div class="gallery-shell reveal">
+          <button class="gallery-arrow" id="galleryPrev" aria-label="Previous">‹</button>
+          <div class="gallery-track" id="galleryTrack"></div>
+          <button class="gallery-arrow" id="galleryNext" aria-label="Next">›</button>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="faqEyebrow">FAQ</p>
+          <h2 data-i18n="faqTitle">Before you begin</h2>
+        </div>
+        <div class="faq-list reveal" id="faqList"></div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-card reveal">
+          <div>
+            <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+            <h2 data-i18n="contactTitle">Start your CYA journey</h2>
+            <p data-i18n="contactText">Message for online/offline classes, personal training, group batches and choreography.</p>
+            <div class="contact-details">
+              <span>CYA</span>
+              <span>Yoga | Zumba | Dance | Wellness</span>
+              <span>WhatsApp: 7996213245</span>
+              <span>Instagram: @yogagee_</span>
+              <span>Email: cyafitness02@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <a class="button primary whatsapp-link" href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a class="button secondary" id="instagramLink" href="#" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="button ghost" id="phoneLink" href="#" data-i18n="callNow">Call Now</a>
+            <a class="button secondary" id="emailLink" href="#" data-i18n="emailNow">Email</a>
+            <button class="button primary" data-open-booking>Book Class</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="paymentModal" aria-hidden="true">
+      <div class="modal-card">
+        <button class="modal-close" data-close-modal>×</button>
+        <p class="eyebrow" data-i18n="selectedPlan">Selected Plan</p>
+        <h2 id="selectedPlanTitle">Monthly Fitness Plan</h2>
+        <p id="selectedPlanPrice">₹1,999/person/month</p>
+        <div class="payment-methods" id="paymentMethods"></div>
+        <div class="upi-box"><strong data-i18n="upiTitle">UPI Payment Placeholder</strong><span data-i18n="upiId">UPI ID: yourupiid@bank</span><div class="qr-placeholder">QR</div><small data-i18n="paymentVerify">Payment confirmation will be shared after verification.</small></div>
+        <div class="payment-actions"><a class="button primary" id="payNowBtn" href="#" target="_blank" rel="noreferrer" data-i18n="payNow">Pay Now</a><a class="button secondary" id="paymentWhatsappBtn" href="#" target="_blank" rel="noreferrer" data-i18n="whatsappPayment">WhatsApp Payment Confirmation</a></div>
+      </div>
+    </div>
+
+    <div class="modal" id="materialsModal" aria-hidden="true">
+      <div class="modal-card">
+        <button class="modal-close" data-close-modal>×</button>
+        <p class="eyebrow" data-i18n="materialsEyebrow">Premium Notes & Materials</p>
+        <h2 data-i18n="materialsTitle">Downloadable guides are reserved for subscribed candidates.</h2>
+        <p id="materialsModalText" data-i18n="materialsLocked">Subscribe to access premium yoga materials and wellness notes.</p>
+        <a class="button primary locked-download" href="assets/yoga-notes-summary.txt" download data-i18n="downloadNotes">Download Notes</a>
+      </div>
+    </div>
+
+    <a class="floating-whatsapp whatsapp-link" href="#" target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a>
+    <button class="floating-trial" data-open-booking data-i18n="bookTrial">Book Trial</button>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <footer class="site-footer">
+      <strong>CYA</strong>
+      <span>Vision: See Your Agility</span>
+      <span>Yoga | Zumba | Dance | Wellness</span>
+      <span>WhatsApp: 7996213245</span>
+      <span>Instagram: @yogagee_</span>
+      <span>Email: cyafitness02@gmail.com</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

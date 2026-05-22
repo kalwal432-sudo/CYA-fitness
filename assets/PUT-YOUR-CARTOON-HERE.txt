@@ -1,0 +1,5 @@
+Save your cartoon image in this folder with the exact file name:
+
+cartoon-yoga.png
+
+After that, open index.html again and the website will show your cartoon.
